@@ -64,6 +64,13 @@
         "description": "Name of resource group of VNET (new or existing)"
       }
     },
+   "ExistingVNetRGName": {
+      "type": "string",
+      "defaultValue": "InfraCore",
+      "metadata": {
+        "description": "Existing VNet Resource Group Name"
+      } 
+    },
     "subnet0Name": {
       "type": "string",
       "defaultValue": "Mgmt",
