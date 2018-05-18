@@ -57,14 +57,7 @@
       },
       "defaultValue": "fwVNET"
     },
-    "virtualNetworkExistingRGName": {
-      "type": "string",
-      "defaultValue": "",
-      "metadata": {
-        "description": "Name of resource group of VNET (new or existing)"
-      }
-    },
-   "ExistingVNetRGName": {
+    "ExistingVNetRGName": {
       "type": "string",
       "defaultValue": "InfraCore",
       "metadata": {
