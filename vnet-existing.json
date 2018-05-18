@@ -20,6 +20,13 @@
         "description": "CIDR for vnet"
       }
     },
+    "ExistingVNetRGName": {
+      "type": "string",
+      "defaultValue": "InfraCore",
+      "metadata": {
+        "description": "Existing VNet Resource Group Name"
+      } 
+    },
     "subnet0Name": {
       "type": "string",
       "defaultValue": "Mgmt",
@@ -93,7 +100,7 @@
   },
   "variables": {
     "location": "[resourceGroup().location]",
-    "rgname": "[resourceGroup().id]",
+    "ExistingVNetRGName": "[resourceGroup().id]",
   },
   "resources": [
   ],
