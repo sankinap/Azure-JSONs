@@ -405,7 +405,7 @@
           "virtualNetworkName": {
                "value": "[reference('SetupVNET').outputs.vnetName.value]"
           },
-          "virtualNetworkExistingRGName": {
+          "ExistingVNetRGName": {
                "value": "[variables('ExistingVNetRGName')]"
           },
           "subnet0Name": {
@@ -516,7 +516,7 @@
           "virtualNetworkName": {
                "value": "[reference('SetupVNET').outputs.vnetName.value]"
           },
-          "ExistingVNetRGName": {
+          "virtualNetworkExistingRGName": {
                "value": "[variables('ExistingVNetRGName')]"
           },
           "lbName": {
