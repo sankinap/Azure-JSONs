@@ -66,7 +66,7 @@
   },
   "variables": {
     "applicationGatewayName": "[parameters('lbName')]",
-    "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
+    "vnetID": "/subscriptions/8c190d1b-eb91-48d5-bec5-3e7cb7412e6c/resourceGroups/AMDRG_InfraCoreServices/providers/Microsoft.Network/virtualNetworks/VNet_EastUS_Core",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',parameters('subnetName'))]",
     "publicIPRef": "[resourceId('Microsoft.Network/publicIPAddresses',parameters('publicIPAddressName'))]",
     "applicationGatewayID": "[resourceId('Microsoft.Network/applicationGateways',variables('applicationGatewayName'))]",
