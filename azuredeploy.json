@@ -41,6 +41,13 @@
         "description": "CIDR for Virtual Network"
       }
     },
+    "ExistingVNetRGName": {
+      "type": "string",
+      "defaultValue": "InfraCore",
+      "metadata": {
+        "description": "Existing VNet Resource Group Name"
+      } 
+    },
     "MgmtSubnetName": {
       "type": "string",
       "defaultValue": "Mgmt",
@@ -249,9 +256,10 @@
   "variables": {
     "location" : "[resourceGroup().location]",
     "rgname" : "[resourceGroup().name]",
+    "ExistingVNetRGName" : "[resourceGroup().name]",
     "LoadBalancerType" : "layer-7",
     "firewallVmCount" : 2,
-    "baseUrl" : "https://github.com/sankinap/Azure-JSONs/blob/master/",
+    "baseUrl" : "https://github.com/sankinap/Azure-JSONs/master/",
     "nsgURL" : "[concat(variables('baseUrl'),'/nsg-new.json')]",
     "vnetURL" : "[concat(variables('baseUrl'),'/vnet-', parameters('virtualNetworkNewOrExisting'),'.json')]",
     "publicLBURL" : "[concat(variables('baseUrl'),'/public-lb-', variables('LoadBalancerType'), '.json')]",
@@ -398,7 +406,7 @@
                "value": "[reference('SetupVNET').outputs.vnetName.value]"
           },
           "virtualNetworkExistingRGName": {
-               "value": "[variables('rgname')]"
+               "value": "[variables('ExistingVNetRGName')]"
           },
           "subnet0Name": {
                "value": "[parameters('MgmtSubnetName')]"
@@ -509,7 +517,7 @@
                "value": "[reference('SetupVNET').outputs.vnetName.value]"
           },
           "virtualNetworkExistingRGName": {
-               "value": "[variables('rgname')]"
+               "value": "[variables('ExistingVNetRGName')]"
           },
           "lbName": {
                "value": "[parameters('internalLoadBalancerName')]"
