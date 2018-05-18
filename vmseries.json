@@ -314,8 +314,8 @@
           "virtualNetworkName": {
             "value": "[parameters('virtualNetworkName')]"
           },
-          "virtualNetworkExistingRGName": {
-            "value": "[parameters('virtualNetworkExistingRGName')]"
+          "ExistingVNetRGName": {
+            "value": "[parameters('ExistingVNetRGName')]"
           },
           "MgmtPublicIPAddressName": {
             "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex())]"
