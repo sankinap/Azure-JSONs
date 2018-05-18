@@ -14,12 +14,12 @@
     "virtualNetworkName": {
       "type": "string"
     },
-    "virtualNetworkExistingRGName": {
+    "ExistingVNetRGName": {
       "type": "string"
     }
   },
   "variables": {
-      "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
+      "vnetID": "[resourceId(parameters('ExistingVNetRGName'),concat('Microsoft.Network','/','virtualNetworks'),parameters('virtualNetworkName'))]",
       "subnet1Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet1Name'))]"
   },
   "resources": [
