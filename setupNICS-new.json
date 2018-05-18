@@ -31,7 +31,7 @@
     }
   },
   "variables": {
-      "vnetID": "[resourceId(parameters('ExistingVNetRGName'),concat('Microsoft.Network','/','virtualNetworks'),parameters('virtualNetworkName'))]",
+      "vnetID": "/subscriptions/8c190d1b-eb91-48d5-bec5-3e7cb7412e6c/resourceGroups/AMDRG_InfraCoreServices/providers/Microsoft.Network/virtualNetworks/VNet_EastUS_Core",
       "subnet0Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet0Name'))]",
       "subnet1Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet1Name'))]",
       "subnet2Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet2Name'))]",
